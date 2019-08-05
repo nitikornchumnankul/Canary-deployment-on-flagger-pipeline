@@ -1,5 +1,5 @@
-# JewelryMeanApp
-Complete MEAN stack app  for eCommerce ( Jewelry ) with authentication
+# e-commerce version 0
+Complete MEAN stack app  for eCommerce 
 
 # Express Backend
 A rock solid Node.js/Express server using Mongoose to  organize models
