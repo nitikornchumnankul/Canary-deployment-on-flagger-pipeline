@@ -61,6 +61,7 @@ const appRoutes: Routes =  [
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     CollapseModule,
+    
   ],
   providers: [ValidateService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
