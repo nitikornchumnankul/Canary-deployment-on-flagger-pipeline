@@ -1,0 +1,23 @@
+{
+  "name": "meanauthapp",
+  "version": "1.0.0",
+  "description": "MEAN stack authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "^1.19.0",
+    "cors": "*",
+    "express": "^4.17.1",
+    "jsonwebtoken": "*",
+    "mongoose": "^5.6.8",
+    "passport": "*",
+    "passport-jwt": "*",
+    "sweetalert2": "^8.15.2"
+  },
+  "author": "Brad Traversy",
+  "license": "ISC"
+}
