@@ -30,4 +30,3 @@ Run app
 $ ng serve
 
 
-Demo:https://authmeanapp.herokuapp.com/
