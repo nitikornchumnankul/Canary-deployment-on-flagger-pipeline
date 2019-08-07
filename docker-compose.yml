@@ -1,0 +1,8 @@
+version: '2'
+services:
+  angular:
+    container_name: angular
+    build: .
+    ports:
+      - 80:80
+    
