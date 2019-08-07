@@ -6,6 +6,9 @@
   "apps": [
     {
       "root": "src",
+      "outputPath": "dist/ngular-src",
+      "tsConfig": "tsconfig.app.json",
+      "aot": false,
       "outDir": "../public",
       "assets": [
         "assets",
