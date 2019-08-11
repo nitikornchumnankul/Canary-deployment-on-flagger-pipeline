@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const Product = require('../models/product')
-const souvenir = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 
 // Register
@@ -49,7 +49,7 @@ router.post('/authenticate', (req, res, next) => {
         if (err) throw err;
 
         if (isMatch) {
-            const token = souvenir.sign({
+            const token = jwt.sign({
                 data: user
             }, config.secret, {
                     expiresIn: 604800 // 1 week
@@ -57,7 +57,7 @@ router.post('/authenticate', (req, res, next) => {
 
             res.json({
                 success: true,
-                token: 'souvenir' + token,
+                token: 'jwt' + token,
                 user: {
                     id: user_id,
                     name: user.name,
@@ -77,7 +77,7 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 //Product receive
-router.get('/product', (req, res, next) => ('souvenir', {
+router.get('/product', (req, res, next) => ('jwt', {
     session: false
 }), (req, res, next) => {
     res.json({
@@ -87,7 +87,7 @@ router.get('/product', (req, res, next) => ('souvenir', {
 });
 
 
-router.post('/addproduct', password.authenticate('souvenir', {
+router.post('/addproduct', password.authenticate('jwt', {
     session: false
 }), (req, res, next) => {
     let newProduct = new Product({
