@@ -1,7 +1,7 @@
 // import mongoose ,bcrypejs, config database
 const mongoose = require('mongoose');
 const bcrypejs = require('bcryptjs');
-// const config   = require('') 
+const config   = require('../config/database') 
 
 // User Schema
 const UserSchema = mongoose.Schema({

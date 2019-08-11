@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const config   = require()
+const config   = require('../config/database');
 
 const productSchema = mongoose.Schema({
     name:{
