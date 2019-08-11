@@ -1,43 +1,43 @@
-const express  = require('express');
-const router   = express.Router();
-const User     = require('../models/user');
-const Product  = require('../models/product')
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user');
+const Product = require('../models/product')
 const souvenir = require('jsonwebtoken');
 
 
 // Register
-router.post('/register',(req,res,next) =>{
+router.post('/register', (req, res, next) => {
     let newUser = new User({
         name: req.body.name,
         email: req.body.email,
         username: req.body.username,
         password: req.body.password,
         role: 'users'
-    });    
+    });
 });
 
-User.addUser(newUser, (err,user)=>{
-    if(err){
+User.addUser(newUser, (err, user) => {
+    if (err) {
         res.json({
             success: false,
             msg: 'Failed to to register user'
         });
-    }else{
+    } else {
         res.json({
             success: true,
-            msg:'User register'
+            msg: 'User register'
         });
     }
 });
 
 // Authenticate
-router.post('/authenticate',(req,res,next)=>{
+router.post('/authenticate', (req, res, next) => {
     const username = req.body.username;
     const password = req.body.password;
 
-    User.getUserByUsername(username,(err,user)=>{
-        if(err) throw err;
-        if(!user){
+    User.getUserByUsername(username, (err, user) => {
+        if (err) throw err;
+        if (!user) {
             return res.json({
                 success: false,
                 msg: 'User not found'
@@ -45,20 +45,20 @@ router.post('/authenticate',(req,res,next)=>{
         }
     });
 
-    User.comparePassword(password,user.password,(err,isMatch)=>{
-        if(err) throw err;
-        
-        if(isMatch){
+    User.comparePassword(password, user.password, (err, isMatch) => {
+        if (err) throw err;
+
+        if (isMatch) {
             const token = souvenir.sign({
-                data:user
-            }, config.secret,{
-                expiresIn: 604800 // 1 week
-            });
+                data: user
+            }, config.secret, {
+                    expiresIn: 604800 // 1 week
+                });
 
             res.json({
                 success: true,
                 token: 'souvenir' + token,
-                user :{
+                user: {
                     id: user_id,
                     name: user.name,
                     username: user.username,
@@ -66,8 +66,8 @@ router.post('/authenticate',(req,res,next)=>{
                     role: user.role
                 }
             });
-         
-        }else{
+
+        } else {
             return res.json({
                 success: false,
                 msg: 'Wrong password'
@@ -77,19 +77,19 @@ router.post('/authenticate',(req,res,next)=>{
 });
 
 //Product receive
-router.get('/product',(req,res,next)=>('souvenir',{
-    session:false
-}),(req,res,next) =>{
+router.get('/product', (req, res, next) => ('souvenir', {
+    session: false
+}), (req, res, next) => {
     res.json({
         user: req.user
     });
-    
+
 });
 
 
-router.post('/addproduct',password.authenticate('souvenir',{
+router.post('/addproduct', password.authenticate('souvenir', {
     session: false
-}),(req,res,next)=>{
+}), (req, res, next) => {
     let newProduct = new Product({
         name: req.body.name,
         img: req.body.img, // Should come back to change this
@@ -97,5 +97,78 @@ router.post('/addproduct',password.authenticate('souvenir',{
         Catag: req.body.Catag
     });
 
-    // router.put('/editproduct',passport.authenticate('souvenir'))
+    Product.addProduct(newProduct, (err, product) => {
+        if (err) {
+          res.json({
+            success: false,
+            msg: 'Failed to add new product'
+          });
+        } else {
+          res.json({
+            success: true,
+            msg: 'Product is added '
+          });
+        }
+      });
 });
+
+router.put('/editproduct', passport.authenticate('jwt', {
+    session: false
+  }), (req, res, next) => {
+    let newProduct = {
+      name: req.body.name,
+      img: req.body.img,
+      description: req.body.description,
+      Catag: req.body.Catag
+    };
+  
+    let oldProductID = req.body.oldId;
+  
+    Product.editProduct(oldProductID, newProduct, (err, product) => {
+      if (err) {
+        res.json({
+          success: false,
+          msg: 'Failed to update  product'
+        });
+      } else {
+        res.json({
+          success: true,
+          msg: 'Product is updated '
+        });
+      }
+    });
+  });
+  
+  router.delete('/deleteproduct/:productId', passport.authenticate('jwt', {
+    session: false
+  }), (req, res, next) => {
+  
+    let productID= req.params.productId;
+  
+    Product.removeProduct(productID, (err, product) => {
+      if (err) {
+        res.json({
+          success: false,
+          msg: 'Failed to update  product'
+        });
+      } else {
+        res.json({
+          success: true,
+          msg: 'Product is updated '
+        });
+      }
+    });
+  });
+  
+  router.get('/manageproduct', passport.authenticate('jwt', {
+    session: false
+  }), (req, res, next) => {
+    Product.find(function (err, product) {
+      // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+      if (err)
+        res.send(err)
+      res.json(product); // return all todos in JSON format
+    });
+  });
+  
+  module.exports = router;
