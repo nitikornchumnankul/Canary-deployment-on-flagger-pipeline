@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -8,9 +8,16 @@ import { HomeComponent } from './components/home/home.component';
 import {Routes, RouterModule} from "@angular/router";
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { LoginComponent } from './components/login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/auth.service';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes:Routes =[
-  { 
+  {
     path:'',
     component: HomeComponent
   },
@@ -18,13 +25,13 @@ const appRoutes:Routes =[
      path:'register',
      component: RegisterComponent
     },
-  { 
-    path:'addproduct', 
+  {
+    path:'addproduct',
     component: AddProductComponent
   },
   {
     path:'login',
-    component:LoginComponent  
+    component:LoginComponent
   }
 ]
 
@@ -40,9 +47,16 @@ const appRoutes:Routes =[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule.forRoot(),
+    MatFormFieldModule,
+    HttpModule,
+    FormsModule,
+    BrowserAnimationsModule,
+
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
