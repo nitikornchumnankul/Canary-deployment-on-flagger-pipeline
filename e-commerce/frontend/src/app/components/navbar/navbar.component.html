@@ -10,15 +10,25 @@
 
     <div id="navbar" class=" navbar-collapse collapse">
         <ul class="navbar-nav mr-auto"></ul>
-        
-        
+
+
+
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item" [routerLinkActive]="[active]">
+
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]='["/addproduct"]'>Add Product</a>
+            </li>
+
+            <li class="nav-item" [routerLinkActive]="['active']">
                 <a class="nav-link" [routerLink]='["/register"]'>Register</a>
             </li>
-        </ul>
 
-        
+            <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]='["/login"]'>Login</a>
+            </li>
+
+
+        </ul>
     </div>
 </nav>
 
