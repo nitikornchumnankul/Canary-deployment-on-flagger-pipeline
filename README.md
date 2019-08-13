@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT.svg?branch=master)](https://travis-ci.org/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT)
 # E-COMMERCE-AND-CANARY-DEPLOYMENT
 
 ### สัปดาห์ที่ 1 
