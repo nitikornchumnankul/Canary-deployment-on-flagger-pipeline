@@ -40,13 +40,14 @@
     2. ถ้าบันทึก แสดง  POP UP ว่าบันทึกสำเร็จ
        ถ้าลบ   แสดง  POP UP ว่าลบสำเร็จ 
 ### สัปดาห์ที่ 8  
-    1. ทำ Unit test เพื่อทำการทดสอบการเพิ่มและบันทึกสินค้าแบบใส่อักขระพิเศษไม่ได้
+    1. ทำ Unit test เพื่อทำการทดสอบการเพิ่มและบันทึกสินค้าแบบใส่อักขระพิเศษไม่ได้ กรณีที่ผ่านไม่ผ่าน
     2. สร้างไฟล์ .travis.yml เพื่อรันบน Travis CI
     3. สร้าง docker images ของ E-commerce application version 1
     4. นำ docker images ที่ สร้างเอาเก็บไว้ใน Docker Registry
     5. สร้างไฟล์ .yml ของ Kubernetes
     6. เชื่อมต่อ The Weave Cloud Agents บน Google Cloud Platform
     7. ทำ Continuous deployment ด้วย Weave Work
+  
 ### สัปดาห์ที่ 9 
     1. ศึกษาการทำ Automated canary promotion จาก Tutorial
 #### ผลลัพธ์
