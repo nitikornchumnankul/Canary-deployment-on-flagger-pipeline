@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node app"
   },
   "author": "Nitikorn Chumnankul",
@@ -18,5 +18,8 @@
     "mongoose": "^5.6.9",
     "passport": "*",
     "passport-jwt": "*"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
