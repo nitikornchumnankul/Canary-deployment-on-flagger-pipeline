@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "node"
+
+install:
+  - npm install
+before_script: 
+  - cd  ./e-commerce/backend
+  - chmod 777 ./node_modules/.bin/jest
+script:
+  - npm test
