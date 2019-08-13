@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const config   = require('../config/database');
 
-const productSchema = mongoose.Schema({
+const productSchema = new mongoose.Schema({
     name:{
         type:String
     },
@@ -17,7 +17,8 @@ const productSchema = mongoose.Schema({
     },
 });
 
-const Product = module.exports = mongoose.model('Product',productSchema);
+var Product = module.exports = mongoose.model('Product',productSchema);
+module.exports = Product;
 
 module.exports.addProduct = function(newPorduct,callback){
     newPorduct.save(callback);
@@ -30,3 +31,6 @@ module.exports.removeProduct = function(productID,callback){
     const query = {_id: productID};
     Product.remove(query,callback);
 }
+
+
+

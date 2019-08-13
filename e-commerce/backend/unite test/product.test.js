@@ -1,16 +1,22 @@
 const Product = require('../models/product');
-test ('check test',() =>{
-    expect("c").not.toBe("test")
+let newProduct = new Product({
+    name: "M150",
+    img: "M150",
+    description: "Power",
+    Catag: "Drink"
+  });
+
+test ('Pass All',() =>{
+    expect(newProduct.Catag).not.toBe(null)
 });
 
-// test("Catage is not null",() =>{
-//     let newProduct = new Product({
-//         name: req.body.name,
-//         img: req.body.img,
-//         description: req.body.description,
-//         Catag: null
-//     });
+let newProduct1 = new Product({
+    name: "M150",
+    img: "M150",
+    description: "Power",
+    Catag: null
+  });
 
-//     expect().toBeType('string');
-// });
-
+test("Catag can not null",() =>{
+    expect(newProduct1.Catag).toBe(null);
+});
