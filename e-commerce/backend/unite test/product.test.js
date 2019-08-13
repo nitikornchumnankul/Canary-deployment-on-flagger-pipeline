@@ -15,7 +15,7 @@ test('Catag should not have special charactor', () => {
 });
 
 
-test('Catag should not have special charactor', () => {
+test('Catag should not have special charactor ', () => {
   expect(newProduct.description).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
 });
 
