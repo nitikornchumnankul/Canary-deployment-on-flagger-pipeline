@@ -6,17 +6,20 @@ let newProduct = new Product({
     Catag: "Drink"
   });
 
-test ('Pass All',() =>{
-    expect(newProduct.Catag).not.toBe(null)
+test("name should not have special charactor",() =>{
+    expect(newProduct.name).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
 });
 
-let newProduct1 = new Product({
-    name: "M150",
-    img: "M150",
-    description: "Power",
-    Catag: null
-  });
-
-test("Catag can not null",() =>{
-    expect(newProduct1.Catag).toBe(null);
+test('Catag should not have special charactor', () => {
+  expect(newProduct.img).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
 });
+
+
+test('Catag should not have special charactor', () => {
+  expect(newProduct.description).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
+});
+
+test('Catag should not have special charactor', () => {
+  expect(newProduct.Catag).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
+});
+
