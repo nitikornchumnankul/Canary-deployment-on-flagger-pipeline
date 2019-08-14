@@ -62,7 +62,8 @@
 ### สัปดาห์ที่ 12
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
-
-
+### เว็บอ้างอิง
+    https://docs.flagger.app/usage/nginx-progressive-delivery
+    https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines
 
  
