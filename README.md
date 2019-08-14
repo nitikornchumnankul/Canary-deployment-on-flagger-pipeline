@@ -63,8 +63,7 @@
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
 ### เว็บอ้างอิง
-    [Duck Duck Go]
-     https://docs.flagger.app/usage/nginx-progressive-delivery
-    https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines
+    **[EFF](https://docs.flagger.app/usage/nginx-progressive-delivery)**
+    **[EFF](https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines)**
 
  
