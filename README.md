@@ -66,6 +66,6 @@
 
 #####    https://docs.flagger.app/usage/nginx-progressive-delivery
 #####    https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines
-#####    https://www.youtube.com/watch?v=0SFTaAuOzsI
+#####    [Tutorial: Hands-on Gitops - Brice Fernandes, Weaveworks](https://www.youtube.com/watch?v=0SFTaAuOzsI)
 
  
