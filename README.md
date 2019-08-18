@@ -69,5 +69,6 @@
 #####    [Automated Canary Management to Kubernetes with Flagger, Istio and GitOps Pipelines](https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines)
 #####    [Tutorial: Hands-on Gitops - Brice Fernandes, Weaveworks](https://www.youtube.com/watch?v=0SFTaAuOzsI)
 #####    [Weaveworks Documentation](https://www.weave.works/docs/)
+#####    [GitOps](https://www.weave.works/technologies/gitops/)
 
  
