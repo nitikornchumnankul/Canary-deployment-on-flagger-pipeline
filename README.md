@@ -63,7 +63,7 @@
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
 ### เว็บอ้างอิง
-
+####     [Travis CI + GitHub Pages - Automated deployment](https://www.youtube.com/watch?v=BFpSD2eoXUk)
 #####    [NGINX Canary Deployments](https://docs.flagger.app/usage/nginx-progressive-delivery)
 #####    [Automated Canary Management to Kubernetes with Flagger, Istio and GitOps Pipelines](https://www.weave.works/blog/automated-canary-management-to-kubernetes-with-flagger-istio-and-gitops-pipelines)
 #####    [Tutorial: Hands-on Gitops - Brice Fernandes, Weaveworks](https://www.youtube.com/watch?v=0SFTaAuOzsI)
