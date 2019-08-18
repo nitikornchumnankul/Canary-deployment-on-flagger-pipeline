@@ -18,13 +18,19 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
-      .map(res => res.json());
+    // return this.http.post('http://localhost:8080/users/register', user, { headers: headers })
+    //   .map(res => res.json());
+
+    return this.http.post('http://192.168.99.100:8080/users/register', user, { headers: headers })
+    .map(res => res.json());
   };
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+    // return this.http.post('http://localhost:8080/users/authenticate', user, { headers: headers })
+    //   .map(res => res.json());
+
+      return this.http.post('http://192.168.99.100:8080/users/authenticate', user, { headers: headers })
       .map(res => res.json());
   }
   loadToken(){
@@ -51,7 +57,9 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/addproduct', product, { headers: headers })
+    // return this.http.post('http://localhost:8080/users/addproduct', product, { headers: headers })
+    //   .map(res => res.json());
+      return this.http.post('http://192.168.99.100:8080/users/addproduct', product, { headers: headers })
       .map(res => res.json());
   }
 
