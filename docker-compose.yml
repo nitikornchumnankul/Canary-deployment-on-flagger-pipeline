@@ -3,22 +3,22 @@ services:
   frontend:
     hostname: localhost
     build: ./e-commerce/frontend
-    image: souvenir_frontend
+    image: nitikornchumnankul/souvenir_frontend
     container_name: souvenir_frontend
     ports:
       - 80:80
     restart: always
 
-  # backend:
-  #     hostname: 192.168.99.100
-  #     build: ./backend
-  #     image: souvenir_backend
-  #     container_name: souvenir_backend
-  #     ports:
-  #       - "8080:8080"
-  #     links:
-  #       - database
-  # database:
-  #   image: mongo
-  #   ports:
-  #     - "27071:27017"
+  backend:
+      hostname: localhost
+      build: ./backend
+      image: nitikornchumnankul/souvenir_backend
+      container_name: souvenir_backend
+      ports:
+        - "8080:8080"
+      links:
+        - database
+  database:
+    image: mongo
+    ports:
+      - "27071:27017"
