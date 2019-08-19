@@ -10,7 +10,6 @@ spec:
   - port: 80
     name: http
     targetPort: 8080
-    protocal: TCP
   selector:
     app: frontend
     
@@ -33,6 +32,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nitikornchumnankul/souvenir_frontend 
+          image: nitikornchumnankul/souvenir_frontend:v1
           ports:
             - containerPort: 80
