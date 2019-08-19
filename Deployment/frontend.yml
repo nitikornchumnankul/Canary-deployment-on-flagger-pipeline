@@ -8,9 +8,9 @@ spec:
   type: NodePort
   ports:
   - port: 80
-    protocal: TCP
     name: http
     targetPort: 8080
+    protocal: TCP
   selector:
     app: frontend
 ---
