@@ -8,7 +8,7 @@ services:
 
 before_install:
   - sudo apt-get install -y make
-  - make test-image deps
+  # - make test-image deps
 install:
   - npm install -D jest
   - npm install
