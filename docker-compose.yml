@@ -11,7 +11,7 @@ services:
 
   backend:
       hostname: localhost
-      build: ./backend
+      build: ./e-commerce/backend
       image: nitikornchumnankul/souvenir_backend
       container_name: souvenir_backend
       ports:
