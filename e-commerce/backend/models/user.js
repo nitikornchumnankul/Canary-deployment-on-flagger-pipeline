@@ -1,16 +1,30 @@
 // import mongoose ,bcrypejs, config database
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const config   = require('../config/database') 
+const regex    = /\w/;
+const emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
 
 // User Schema
 const UserSchema = mongoose.Schema({
     name: {
-      type: String
+      type: String,
+      validate: {
+        validator: function(valid){
+            return regex.test(valid);
+        }
+    },
+        message: props => `${props.value} is not a valid special charactor`
     },
     email: {
       type: String,
-      required: true
+      required: true,
+      validate:{
+        validator: function(valid){
+          return emailRegex.test(valid);
+        }
+      }
+
     },
     username: {
       type: String,

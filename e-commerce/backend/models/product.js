@@ -1,19 +1,36 @@
 const mongoose = require('mongoose');
-const config   = require('../config/database');
-
+const regex    = /\w/;
 const productSchema = new mongoose.Schema({
     name:{
-        type:String
+        type:String,
+        validate: {
+            validator: function(valid){
+                return regex.test(valid);
+            }
+        },
+       message: props => `${props.value} is not a valid special charactor`
     },
     img:{
         type:String,
     },
     description:{
-        type:String
+        type:String,
+        validate: {
+            validator: function(valid){
+                return regex.test(valid);
+            }
+        },
+        message: props => `${props.value} is not a valid special charactor`
     },
     Catag:{
         type: String,
-        required: true
+        required: true,
+        validate: {
+            validator: function(valid){
+                return regex.test(valid);
+            }
+        },
+        message: props => `${props.value} is not a valid special charactor`
     },
 });
 
