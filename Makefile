@@ -40,7 +40,8 @@ clean:
 	@if [ $$(docker images -q $(IMAGE) | wc -l) -ge 1 ]; then docker rmi $(IMAGE); fi
 
 # Builds the Docker image used for running tests
-
+test-image:
+	@docker build -t $(IMAGE) -f test/Dockerfile .
 
 
 
