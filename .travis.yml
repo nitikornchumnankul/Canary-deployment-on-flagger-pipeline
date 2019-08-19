@@ -1,7 +1,14 @@
 language: node_js
+sudo: required
+
 node_js:
   - "node"
+services:
+  - docker
 
+before_install:
+  - sudo apt-get install -y make
+  - make test-image deps
 install:
   - npm install -D jest
   - npm install
@@ -10,3 +17,12 @@ before_script:
   - chmod 777 ./node_modules/.bin/jest
 script:
   - npm test
+  - make test
+
+after_success:
+  - set -e
+  - if [ -z "${DOCKER_PASS}" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
+  - docker login -u "${DOCKER_USER}" -p "${DOCKER_PASS}";
+  - ./e-commerce/frontend/scripts/build.sh
+  # - ./test/container.sh
+  - ./e-commerce/frontend/scripts/push.sh
