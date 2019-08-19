@@ -70,5 +70,5 @@
 #####    [Tutorial: Hands-on Gitops - Brice Fernandes, Weaveworks](https://www.youtube.com/watch?v=0SFTaAuOzsI)
 #####    [Weaveworks Documentation](https://www.weave.works/docs/)
 #####    [GitOps](https://www.weave.works/technologies/gitops/)
-
+#####    [Continuous Delivery the Hard Way with Kuberenetes](https://www.youtube.com/watch?v=6PPgZXuDY_U)
  
