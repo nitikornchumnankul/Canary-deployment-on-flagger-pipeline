@@ -12,6 +12,10 @@ before_install:
 install:
   - npm install -D jest
   - npm install
+
+env:
+  - GROUP=nitikornchumnakul COMMIT="${TRAVIS_COMMIT}" TAG="${TRAVIS_TAG}" REPO=nitikornchumnankul;
+
 before_script: 
   - cd  ./e-commerce/backend
   - chmod 777 ./node_modules/.bin/jest
@@ -24,5 +28,8 @@ after_success:
   - if [ -z "${DOCKER_PASS}" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
   - docker login -u "${DOCKER_USER}" -p "${DOCKER_PASS}";
   - ./e-commerce/frontend/scripts/build.sh
+  - ./e-commerce/backend/scripts/build.sh
   # - ./test/container.sh
   - ./e-commerce/frontend/scripts/push.sh
+  - ./e-commerce/backend/scripts/push.sh
+
