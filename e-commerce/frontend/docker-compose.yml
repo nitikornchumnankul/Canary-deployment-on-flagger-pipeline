@@ -1,8 +1,0 @@
-version: '2'
-services:
-  frontend:
-    hostname: 192.168.99.100
-    build: .
-    image: angular_frontend
-    ports:
-      - 80:80
