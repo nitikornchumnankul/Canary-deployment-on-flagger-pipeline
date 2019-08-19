@@ -13,6 +13,7 @@ spec:
     protocal: TCP
   selector:
     app: frontend
+    
 ---
 apiVersion: apps/v1
 kind: Deployment
