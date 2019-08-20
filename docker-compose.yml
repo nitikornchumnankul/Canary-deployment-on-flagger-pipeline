@@ -6,7 +6,7 @@ services:
     image: nitikornchumnankul/souvenir_frontend
     container_name: souvenir_frontend
     ports:
-      - 80:80
+      - 4200:4200
     restart: always
 
   backend:
