@@ -1,36 +1,36 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: backend
   labels:
-    app: frontend
+    app: backend
 spec:
-  type: NodePort
+  type: NodePord
   ports:
    - port: 4200
      name: http
      targetPort: 4200
   selector:
-    app: frontend 
+    app: backend
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: backend
   labels:
-    app: fortend
+    app: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: backend
   template:
     metadata:
       labels:
-        app: frontend
+        app: backend
     spec:
       containers:
-        - name: frontend
-          image: nitikornchumnankul/souvenir_frontend:v1
+        - name: backend
+          image: nitikornchumnankul/souvenir_backend
           ports:
-            - containerPort: 4200
+           - containerPort: 8080
