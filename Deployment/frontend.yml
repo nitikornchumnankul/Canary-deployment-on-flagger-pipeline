@@ -7,9 +7,9 @@ metadata:
 spec:
   type: NodePort
   ports:
-   - port: 4200
+   - port: 8080
      name: http
-     targetPort: 4200
+     targetPort: 8080
   selector:
     app: frontend 
 ---
@@ -33,4 +33,4 @@ spec:
         - name: frontend
           image: nitikornchumnankul/souvenir_frontend:v1
           ports:
-            - containerPort: 4200
+            - containerPort: 80
