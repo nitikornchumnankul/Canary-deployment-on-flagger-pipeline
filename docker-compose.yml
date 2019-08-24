@@ -3,7 +3,11 @@ services:
   frontend:
     hostname: localhost
     build: ./e-commerce/frontend
+<<<<<<< HEAD
     image: nitikornchumnankul/souvenir_frontend:v1.0.1
+=======
+    image: nitikornchumnankul/souvenir_frontend
+>>>>>>> nitikorn
     container_name: souvenir_frontend
     ports:
       - 4200:4200
@@ -12,7 +16,11 @@ services:
   backend:
       hostname: localhost
       build: ./e-commerce/backend
+<<<<<<< HEAD
       image: nitikornchumnankul/souvenir_backend:v.0.1
+=======
+      image: nitikornchumnankul/souvenir_backend
+>>>>>>> nitikorn
       container_name: souvenir_backend
       ports:
         - 8080:8080

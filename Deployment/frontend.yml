@@ -7,9 +7,15 @@ metadata:
 spec:
   type: NodePort
   ports:
+<<<<<<< HEAD
    - port: 4200
      name: http
      targetPort: 4200
+=======
+  - port: 80
+    name: http
+    targetPort: 8080
+>>>>>>> nitikorn
   selector:
     app: frontend 
 ---
@@ -33,4 +39,8 @@ spec:
         - name: frontend
           image: nitikornchumnankul/souvenir_frontend:v1
           ports:
+<<<<<<< HEAD
             - containerPort: 4200
+=======
+            - containerPort: 80
+>>>>>>> nitikorn
