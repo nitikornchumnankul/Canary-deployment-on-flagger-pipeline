@@ -11,7 +11,9 @@ const productSchema = new mongoose.Schema({
        message: props => `${props.value} is not a valid special charactor`
     },
     img:{
-        type:String,
+        data: Buffer,
+        contentType: String
+        
     },
     description:{
         type:String,
@@ -48,6 +50,7 @@ module.exports.removeProduct = function(productID,callback){
     const query = {_id: productID};
     Product.remove(query,callback);
 }
+
 
 
 

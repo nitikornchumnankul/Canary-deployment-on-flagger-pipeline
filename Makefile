@@ -1,4 +1,8 @@
-IMAGE=front-end
+<<<<<<< HEAD
+dockerbuild:
+	docker build -t $(SITE_NAME):lastest
+=======
+IMAGE=frontend
 
 .PHONY: test coverage
 
@@ -58,3 +62,4 @@ kill-compose:
 kill-server:
 	@if [ $$(docker ps -a -q -f name=$(IMAGE) | wc -l) -ge 1 ]; then docker rm -f $(IMAGE); fi
 
+>>>>>>> 5284207a4d45af69ba5a74ea41ad2011abec90ca
