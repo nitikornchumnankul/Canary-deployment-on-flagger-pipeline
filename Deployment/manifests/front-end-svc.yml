@@ -5,7 +5,7 @@ metadata:
   name: frontend
   labels:
     name: frontend
-  namespace: frontend
+  namespace: frontend-ecommerce
 spec:
   ports:
     # the port that this service should serve on
