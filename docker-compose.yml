@@ -16,7 +16,6 @@ services:
       container_name: souvenir_backend
       ports:
         - 8080:8080
-
       links:
         - database
   database:
