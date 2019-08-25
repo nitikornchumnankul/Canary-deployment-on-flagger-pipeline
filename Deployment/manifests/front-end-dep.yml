@@ -20,7 +20,6 @@ spec:
         ports:
         - name: frontend
           containerPort: 80
-          readOnlyRootFilesystem: true
         volumeMounts:
         - mountPath: /tmp
           name: tmp-volume
