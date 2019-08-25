@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nitikornchumnankul/e-commerce-and-canary-deployment
+          image: nitikornchumnankul/souvenir_frontend
           ports:
             - containerPort: 80
