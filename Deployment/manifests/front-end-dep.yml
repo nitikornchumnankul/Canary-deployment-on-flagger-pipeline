@@ -20,10 +20,4 @@ spec:
         ports:
         - name: frontend
           containerPort: 80
-        volumeMounts:
-        - mountPath: /tmp
-          name: tmp-volume
-      volumes:
-        - name: tmp-volume
-          emptyDir:
-            medium: Memory
+     
