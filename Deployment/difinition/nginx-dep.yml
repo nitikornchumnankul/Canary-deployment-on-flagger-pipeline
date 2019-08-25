@@ -6,6 +6,8 @@ metadata:
   labels:
     name: nginx
   namespace: nginx
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 1
   template:
