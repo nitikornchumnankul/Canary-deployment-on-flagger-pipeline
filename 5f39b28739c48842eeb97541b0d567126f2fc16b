@@ -1,0 +1,1 @@
+{"jobID":"78037b4f-bb5f-d6db-082e-71de75fbd486","spec":{"type":"policy","cause":{"Message":"","User":"Nitikorn Chumnankul \u003cnitikorn.1597@gmail.com\u003e"},"spec":{"frontend-ecommerce:deployment/frontend":{"add":{"automated":"true"},"remove":null}}},"result":null}
