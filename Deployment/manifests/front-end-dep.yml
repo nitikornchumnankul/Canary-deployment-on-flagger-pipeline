@@ -5,7 +5,7 @@ metadata:
   name: frontend
   labels:
     name: frontend
-  namespace: frontend-ecommerce
+  namespace: default
   annotations:
     flux.weave.works/automated: 'true'
 spec:
