@@ -23,7 +23,7 @@
     4. เชื่อมต่อ The Weave Cloud Agents บน Google Cloud Platform
     5. ทำ Continuous deployment ด้วย Weave Work
 
-### สัปดาห์ที่ 5 
+### [สัปดาห์ที่ 5 ](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki/Flagger-Install-on-GKE-Istio)
     1. ติดตั้ง GKE Cluster บน Google Cloud Platform
     2. ติดตั้ง Cloud DNS บน Google Cloud Platform
     3. ติดตั้ง Helm บน Google Cloud Platform
