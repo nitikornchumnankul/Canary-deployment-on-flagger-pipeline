@@ -63,6 +63,11 @@
 ### สัปดาห์ที่ 12
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
+### การเรียนรู้เพิ่มเติม
+    1. gitops คืออะไร
+    2. Canary deployment คืออะไร
+    
+    
 ### เว็บอ้างอิง
 #####    [Travis CI + GitHub Pages - Automated deployment](https://www.youtube.com/watch?v=BFpSD2eoXUk)
 #####    [Travis CI - Part 5 Pushin To Dockerhub](https://www.youtube.com/watch?v=YrJyWXYTgzQ)
