@@ -10,9 +10,9 @@ test("name should not have special charactor",() =>{
     expect(newProduct.name).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
 });
 
-test('img should not have special charactor', () => {
-  expect(newProduct.img).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
-});
+// test('img should not have special charactor', () => {
+//   expect(newProduct.img).not.toMatch(/!@#$%^&*(),.?":{}|<>/);
+// });
 
 
 test('description should not have special charactor ', () => {
