@@ -15,9 +15,6 @@ install:
 
 # env:
 #   - GROUP=nitikornchumnakul COMMIT="${TRAVIS_COMMIT}" TAG="${TRAVIS_TAG}" REPO=nitikornchumnankul;
-
-
-
 before_script: 
   - cd  ./e-commerce/backend
   - chmod 777 ./node_modules/.bin/jest
