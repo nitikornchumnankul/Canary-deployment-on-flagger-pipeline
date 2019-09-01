@@ -24,7 +24,6 @@ steps:
       - npm install
       - npm test
     stage: "test"
-
   build_image:
     type: build
     title: "Annotating Build Backend"
@@ -33,9 +32,7 @@ steps:
     dockerfile: dockerfile
     image_name: souvenir_backend
     tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
-    stage: "build"
-  
-
+    stage: "build" 
   PushingToRegistries:
     type: parallel
     stage: 'push'
@@ -56,8 +53,6 @@ steps:
             set:
               - ${{build_image.imageId}}:
                   - CF_QUALITY: false
-
-        
   PushToDockerRegistry:
       type: push 
       title: "Pushing image to dockerfile"
