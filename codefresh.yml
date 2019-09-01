@@ -1,0 +1,11 @@
+version: "1.0"
+stages:
+  - "clone"
+steps:
+  main_clone:
+    type: "git-clone"
+    description: "clone main repository..."
+    repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT"
+    revision: "${{CF_BRANCH}}"
+    stage: "clone"
+    
