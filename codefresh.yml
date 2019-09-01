@@ -26,29 +26,46 @@ steps:
       - npm test
     stage: "test"
 
-  build_image:
+  build_image_backend:
     type: build
-    title: "Annotating Build"
+    title: "Annotating Build Backend"
     description: build image backend
     working_directory: ${{main_clone}}/e-commerce/backend
     dockerfile: dockerfile
     image_name: souvenir_backend
     tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
     stage: "build"
+  
 
   PushingToRegistries:
     type: parallel
     stage: 'push'
     steps:
-      PushToDockerRegistry:
-        type: push 
-        title: "Pushing image to dockerfile"
-        image_name: "nitikornchumnankul/souvenir_backend"
-        registry: dockerhub
-        candidate: "${{build}}"
-        tags:
-          - "${{CF_BRANCH_TAG_NORMALIZED}}"
-          - "${{CF_REVISION}}"
-    
+      annotate_build:
+        title: "Annotating Build"
+        image: ${{build_image}}
+        working_directory: ${{main_clone}}/e-commerce/backend
+        commands:
+          - "echo Annotating Build..."
+        on_success:
+          metadata:
+            set:
+              - ${{build_image.imageId}}:
+                  - CF_QUALITY: true
+        on_error:
+          metadata:
+            set:
+              - ${{build_image.imageId}}:
+                  - CF_QUALITY: false
 
-    
+        
+  PushToDockerRegistry:
+      type: push 
+      title: "Pushing image to dockerfile"
+      image_name: "nitikornchumnankul/souvenir_backend"
+      registry: "dockerhub"
+      candidate: "${{build_image}}"
+      tags:
+        - "${{CF_BRANCH_TAG_NORMALIZED}}"
+        - "${{CF_REVISION}}"
+      stage: "push"
