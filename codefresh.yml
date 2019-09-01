@@ -26,7 +26,7 @@ steps:
       - npm test
     stage: "test"
 
-  build_image_backend:
+  build_image:
     type: build
     title: "Annotating Build Backend"
     description: build image backend
