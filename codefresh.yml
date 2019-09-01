@@ -1,0 +1,21 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "test"
+steps:
+  main_clone:
+    type: "git-clone"
+    description: "clone main repository..."
+    repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/e-commerce/backend"
+    revision: "${{CF_BRANCH}}"
+    stage: "clone"
+  unit_tests:
+    image: node:6
+    fail-fast: false
+    working_directory: ${{main_clone}}
+    commands:
+      - npm install -D jest
+      - npm install
+      - npm test
+
+    
