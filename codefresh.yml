@@ -5,14 +5,12 @@ stages:
   - "build"
   - "push"
 steps:
-
   main_clone:
     type: "git-clone"
     description: "clone main repository..."
     repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT"
     revision: "${{CF_BRANCH}}"
     stage: "clone"
-
   unit_tests:
     image: node:6
     fail-fast: false
