@@ -1,21 +1,54 @@
 version: "1.0"
 stages:
-  - "clone"
+  - "clone"  
   - "test"
+  - "build"
+  - "push"
+
 steps:
+
   main_clone:
     type: "git-clone"
     description: "clone main repository..."
-    repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/e-commerce/backend"
+    repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT"
     revision: "${{CF_BRANCH}}"
     stage: "clone"
+
   unit_tests:
     image: node:6
     fail-fast: false
     working_directory: ${{main_clone}}
     commands:
+      - cd  ./e-commerce/backend
+      - chmod 777 ./node_modules/.bin/jest
       - npm install -D jest
       - npm install
       - npm test
+    stage: "test"
+
+  build_image:
+    type: build
+    title: "Annotating Build"
+    description: build image backend
+    working_directory: ${{main_clone}}/e-commerce/backend
+    dockerfile: dockerfile
+    image_name: souvenir_backend
+    tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+    stage: "build"
+
+  PushingToRegistries:
+    type: parallel
+    stage: 'push'
+    steps:
+      PushToDockerRegistry:
+        type: push 
+        title: "Pushing image to dockerfile"
+        image_name: "nitikornchumnankul/souvenir_backend"
+        registry: dockerhub
+        candidate: "${{build}}"
+        tags:
+          - "${{CF_BRANCH_TAG_NORMALIZED}}"
+          - "${{CF_REVISION}}"
+    
 
     
