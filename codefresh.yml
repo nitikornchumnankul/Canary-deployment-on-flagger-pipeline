@@ -11,6 +11,7 @@ steps:
     repo: "nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT"
     revision: "${{CF_BRANCH}}"
     stage: "clone"
+
   unit_tests:
     image: node:6
     fail-fast: false
@@ -22,7 +23,8 @@ steps:
       - npm install
       - npm test
     stage: "test"
-  build_image:
+  
+  build_image_backend:
     type: build
     title: "Annotating Build Backend"
     description: build image backend
@@ -31,32 +33,72 @@ steps:
     image_name: souvenir_backend
     tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
     stage: "build" 
+  
+  build_image_frontend:
+    type: build
+    title: "Annotating Build Frontend"
+    description: build image backend
+    working_directory: ${{main_clone}}/e-commerce/frontend
+    dockerfile: dockerfile
+    image_name: souvenir_frontend
+    tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+    stage: "build" 
+
   PushingToRegistries:
     type: parallel
     stage: 'push'
     steps:
-      annotate_build:
-        title: "Annotating Build"
-        image: ${{build_image}}
+      annotate_build_backend:
+        title: "Annotating Build Backend"
+        image: ${{build_image_backend}}
         working_directory: ${{main_clone}}/e-commerce/backend
         commands:
           - "echo Annotating Build..."
         on_success:
           metadata:
             set:
-              - ${{build_image.imageId}}:
+              - ${{build_image_backend.imageId}}:
                   - CF_QUALITY: true
         on_error:
           metadata:
             set:
-              - ${{build_image.imageId}}:
+              - ${{build_image_backend.imageId}}:
                   - CF_QUALITY: false
-  PushToDockerRegistry:
+
+      annotate_build_frontend:
+        title: "Annotating Build Frontend"
+        image: ${{build_image_frontend}}
+        working_directory: ${{main_clone}}/e-commerce/frontend
+        commands:
+          - "echo Annotating Build..."
+        on_success:
+          metadata:
+            set:
+              - ${{build_image_frontend.imageId}}:
+                  - CF_QUALITY: true
+        on_error:
+          metadata:
+            set:
+              - ${{build_image_frontend.imageId}}:
+                  - CF_QUALITY: false
+
+  PushBackendToDockerRegistry:
       type: push 
-      title: "Pushing image to dockerfile"
+      title: "Pushing image to Dockerfile Backend"
       image_name: "nitikornchumnankul/souvenir_backend"
       registry: "dockerhub"
-      candidate: "${{build_image}}"
+      candidate: "${{build_image_backend}}"
+      tags:
+        - "${{CF_BRANCH_TAG_NORMALIZED}}"
+        - "${{CF_REVISION}}"
+      stage: "push"
+
+  PushFrontendToDockerRegistry:
+      type: push 
+      title: "Pushing image to Dockerfile Frontend"
+      image_name: "nitikornchumnankul/souvenir_frontend"
+      registry: "dockerhub"
+      candidate: "${{build_image_frontend}}"
       tags:
         - "${{CF_BRANCH_TAG_NORMALIZED}}"
         - "${{CF_REVISION}}"
