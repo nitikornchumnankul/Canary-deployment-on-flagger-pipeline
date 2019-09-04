@@ -24,6 +24,7 @@ export class AuthService {
     // return this.http.post('http://192.168.99.100:8080/users/register', user, { headers: headers })
     // .map(res => res.json());
   };
+
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
