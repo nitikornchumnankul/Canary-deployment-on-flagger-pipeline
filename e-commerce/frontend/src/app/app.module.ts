@@ -14,12 +14,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {ToastrModule} from 'ngx-toastr';
+import { OrderListComponent } from './components/order-list/order-list.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const appRoutes:Routes =[
   {
     path:'',
     component: HomeComponent
+  },
+   {
+      path:'cart',
+      component: CartComponent
+   },
+  {
+    path:'orderlist',
+    component: OrderListComponent
   },
   {
      path:'register',
@@ -43,13 +53,16 @@ const appRoutes:Routes =[
     NavbarComponent,
     HomeComponent,
     AddProductComponent,
-    LoginComponent
+    LoginComponent,
+    OrderListComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
+    ToastrModule.forRoot(),
     MatFormFieldModule,
     HttpModule,
     FormsModule,

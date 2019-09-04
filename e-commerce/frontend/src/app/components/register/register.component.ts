@@ -16,7 +16,8 @@ export class RegisterComponent implements OnInit {
   role:String;
 
   constructor(private flashMessage:FlashMessagesService,
-    private authservice:AuthService,
+  
+  private authservice:AuthService,
   private router:Router) { }
 
   ngOnInit() {
