@@ -78,4 +78,20 @@ export class AuthService {
     this.user = null;
     localStorage.clear();
   }
+
+  updateItemsInOrder(items: any) {
+    localStorage.removeItem("items");
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+  getOrderFromItems() {
+    return this.iteml = JSON.parse(localStorage.getItem("items"));
+  }
+  orderClear() {
+    localStorage.removeItem("items");
+    localStorage.removeItem("item");
+  }
+  storeTotal(total: any) {
+    this.totall = total;
+  }
+
 }

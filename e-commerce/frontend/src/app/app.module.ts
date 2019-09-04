@@ -16,12 +16,17 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from 'ngx-toastr';
 import { OrderListComponent } from './components/order-list/order-list.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const appRoutes:Routes =[
   {
     path:'',
     component: HomeComponent
   },
+   {
+      path:'cart',
+      component: CartComponent
+   },
   {
     path:'orderlist',
     component: OrderListComponent
@@ -49,7 +54,8 @@ const appRoutes:Routes =[
     HomeComponent,
     AddProductComponent,
     LoginComponent,
-    OrderListComponent
+    OrderListComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
