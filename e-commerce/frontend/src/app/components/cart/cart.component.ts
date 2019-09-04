@@ -34,7 +34,7 @@ export class CartComponent implements OnInit {
     else{
     this.totalitems=this.items.length;
      this.subtotal=this.totalitems * 350;
-     this.total=this.subtotal + 6.94;
+     this.total=this.subtotal + 40;
     }
       
   }
@@ -44,7 +44,7 @@ export class CartComponent implements OnInit {
     }
     this.totalitems = this.items.length;
     this.subtotal = this.totalitems * 350;
-    this.total = this.subtotal + 6.94;
+    this.total = this.subtotal + 40;
     this.authService.updateItemsInOrder(this.items);
     this.router.navigate(['/cart']);
   }

@@ -64,6 +64,31 @@ export class AuthService {
       // return this.http.post('http://192.168.99.100:8080/users/addproduct', product, { headers: headers })
       // .map(res => res.json());
   }
+  getProducts() {
+    let headers = new Headers();
+
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('users/product', { headers: headers })
+      .map(res => res.json());
+  }
+  storeItemToOrder(item: any) {
+
+    var tempItem = JSON.parse(localStorage.getItem("items"));
+    if (tempItem == null) tempItem = [];
+    localStorage.setItem("item", JSON.stringify(item));
+    tempItem.push(item);
+    localStorage.setItem("items", JSON.stringify(tempItem));
+
+  }
+  deleteProduct(productID) {
+    let headers = new Headers();
+    this.loadToken();
+
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.delete('http://localhost:8080/users/deleteproduct/' + productID, { headers: headers })
+      .map(res => res.json());
+  }
 
   userRole() {
     const role = localStorage.getItem('role');
@@ -94,4 +119,8 @@ export class AuthService {
     this.totall = total;
   }
 
+  storeProductData(product1: any) {
+    this.oldproduct = product1;
+
+  }
 }
