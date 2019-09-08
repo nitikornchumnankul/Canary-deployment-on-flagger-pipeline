@@ -75,7 +75,7 @@
     9.  Flagger คืออะไร
     10. Flagger ช่วยฝั่งไหน
     11. ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
-     
+### [CHECK LIST](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki/CHECK-LIST)
     
     
     
