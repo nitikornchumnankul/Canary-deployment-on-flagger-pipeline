@@ -3,39 +3,48 @@
 # [E-COMMERCE-AND-CANARY-DEPLOYMENT](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki)
 
 ### สัปดาห์ที่ 1 
-    1. ทำหน้า UI ของ E-commerce application version 1 ด้วย MEAN STACK
+1. ทำหน้า UI ของ E-commerce application version 1 ด้วย MEAN STACK
 #### ผลลัพธ์ 
-    - แสดงรายการสินค้า
+- [x] แสดงรายการสินค้า
+#### ปัญหาที่พบ
+- [ ] ยังมี hardcode ของรูปภาพอยู่
 ### สัปดาห์ที่ 2 
     1. ทำหน้าเพิ่มรายการสินค้าและบันทึกรายการสินค้า
 #### ผลลัพธ์
-    - แสดง POP UP ว่าบันทึกสำเร็จ
+- [x] แสดง POP UP ว่าบันทึกสำเร็จ
 ### สัปดาห์ที่ 3 
     1. ทำ Unit test เพื่อทำการทดสอบการเพิ่มและบันทึกสินค้าแบบใส่อักขระพิเศษไม่ได้
     2. สร้างไฟล์ .travis.yml เพื่อรันบน Travis CI
 #### ผลลัพธ์
-    1. เมื่อทำการทดสอบทั้งหมดจะแสดงคำว่า PASS บน Command line 
-    2. แสดงเครื่องหมายถูกต้อง หรือ สัญลักษณ์ที่ แสดงว่า ทำการทดสอบสำเร็จบน Web Site ของ Travis CI
+- [x] เมื่อทำการทดสอบทั้งหมดจะแสดงคำว่า PASS บน Command line 
+- [x] แสดงเครื่องหมายถูกต้อง หรือ สัญลักษณ์ที่ แสดงว่า ทำการทดสอบสำเร็จบน Web Site ของ Travis CI
 ### สัปดาห์ที่ 4 
-    1. สร้าง docker images ของ E-commerce application version 1
-    2. นำ docker images ที่ สร้างเอาเก็บไว้ใน Docker Registry
-    3. สร้างไฟล์ .yml ของ Kubernetes
-    4. เชื่อมต่อ The Weave Cloud Agents บน Google Cloud Platform
-    5. ทำ Continuous deployment ด้วย Weave Work
+- [x] สร้าง docker images ของ E-commerce application version 1
+- [x] นำ docker images ที่ สร้างเอาเก็บไว้ใน Docker Registry
+- [ ]  สร้างไฟล์ .yml ของ Kubernetes
+- [x] เชื่อมต่อ The Weave Cloud Agents บน Google Cloud Platform
+- [ ] ทำ Continuous deployment ด้วย Weave Work
 
 ### [สัปดาห์ที่ 5 ](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki/Flagger-Install-on-GKE-Istio)
-    1. ติดตั้ง GKE Cluster บน Google Cloud Platform
-    2. ติดตั้ง Cloud DNS บน Google Cloud Platform
-    3. ติดตั้ง Helm บน Google Cloud Platform
-    4. ติดตั้ง Cert-manager บน Google Cloud Platform
-    5. ติดตั้ง Istio Gateway TLS บน Google Cloud Platform
+- [x] ติดตั้ง GKE Cluster บน Google Cloud Platform
+- [x] ติดตั้ง Cloud DNS บน Google Cloud Platform
+- [x] ติดตั้ง Helm บน Google Cloud Platform
+- [x] ติดตั้ง Cert-manager บน Google Cloud Platform
+- [x] ติดตั้ง Istio Gateway TLS บน Google Cloud Platform
+#### ปัญหาที่พบ
+- [ ] ไม่เข้าใจหลักการทำงานของ Cloud DNS ว่ามการเซ็ต ค่าการเข้าออกอย่างไร
+- [ ] ยังไม่เข้าใจ helm เวลาติดตั้ง Package ต่างๆ หรือ Update 
+- [ ] Cert-manager ใช้อย่างไร มันทำงานอย่างไร
+- [ ] หลักกการของ Istio Gateaway TLS ควบคุมอย่างไร
 ### สัปดาห์ที่ 6 
     1. ทำหน้า UI ของ E-COMMERCE VERSION 2 ด้วย MEAN STACK
 #### ผลลัพธ์
-    แสดงรายการสินค้าและสามารถเลือกซื้อสินค้าได้
+- [x]  แสดงรายการสินค้าและสามารถเลือกซื้อสินค้าได้
 ### สัปดาห์ที่ 7 
-    1. ทำหน้า UI ยืนยันคำสั่งซื้อ
-    2. ทำหน้ารายงานรายการสินค้าและที่สามารถบันทึก ลบ และแก้ไข รายการสินค้า
+- [ ] ทำหน้า UI ยืนยันคำสั่งซื้อ
+- [ ] ทำหน้ารายงานรายการสินค้าและที่สามารถบันทึก ลบ และแก้ไข รายการสินค้า
+### สิ่งที่ไม่เข้าใจในสัปดาห์น้คือ
+- [ ] วิธีการ Push และ Get
 #### ผลลัพธ์
     1. แสดงสถานะของผู้สั่งซื้อ
     2. ถ้าบันทึก แสดง  POP UP ว่าบันทึกสำเร็จ
@@ -64,18 +73,18 @@
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
 ### เนื้อหาในโครงงาน
-    1.  gitops คืออะไร
-    2.  Canary deployment คืออะไร
-    3.  devops กับ gitops แตกต่างกันอย่างไร
-    4.  ระหว่างการ Deploy แบบ ธรรมดา กับแบบ 
-    5.  gitops ช่วยในการแก้ปัญหาจาก ปกติ คืออะไร
-    6.  เปรียบเทียบการ Deploy แบบธรรมดา แบบ Devops และ Gitops
-    7.  Canary deployment คืออะไร
-    8.  ใช้เครื่องมืออะไรบ้าง
-    9.  Flagger คืออะไร
-    10. Flagger ช่วยฝั่งไหน
-    11. ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
-### [CHECK LIST](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki/CHECK-LIST)
+- [ ]  gitops คืออะไร
+- [ ]  Canary deployment คืออะไร
+- [ ]  devops กับ gitops แตกต่างกันอย่างไร
+- [ ]  ระหว่างการ Deploy แบบ ธรรมดา กับแบบ 
+- [ ]  gitops ช่วยในการแก้ปัญหาจาก ปกติ คืออะไร
+- [ ]  เปรียบเทียบการ Deploy แบบธรรมดา แบบ Devops และ Gitops
+- [ ]  Canary deployment คืออะไร
+- [ ] ใช้เครื่องมืออะไรบ้าง
+- [ ]  Flagger คืออะไร
+- [ ] Flagger ช่วยฝั่งไหน
+- [ ] ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
+     
     
     
     
