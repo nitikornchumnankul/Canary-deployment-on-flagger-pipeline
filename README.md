@@ -2,7 +2,7 @@
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT%2FE-COMMERCE-AND-CANARY-DEPLOYMENT?key=eyJhbGciOiJIUzI1NiJ9.NWQ1ZmRmYzFjNDI1ZjE2ZTY1MzQ2YTY4.gyGUScNe8n81E-DdnhuNQ9S0MGEARcGDuCvzksqy200&type=cf-1)]( https://g.codefresh.io/pipelines/E-COMMERCE-AND-CANARY-DEPLOYMENT/builds?filter=trigger:build~Build;pipeline:5d5fe162645130b671b2a137~E-COMMERCE-AND-CANARY-DEPLOYMENT)
 # [E-COMMERCE-AND-CANARY-DEPLOYMENT](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki)
 
-# พักโปรเจคชั่วคราว เนื่องจาก ติดงาน ของ มหาลัย
+# พักโปรเจคชั่วคราว เนื่องจาก ติดงาน นอก และ เร่งด่วน
 
 ### สัปดาห์ที่ 1 
 1. ทำหน้า UI ของ E-commerce application version 1 ด้วย MEAN STACK
