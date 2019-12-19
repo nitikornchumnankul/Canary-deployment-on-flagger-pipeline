@@ -85,7 +85,7 @@
 - [ ]  เปรียบเทียบการ Deploy แบบธรรมดา แบบ Devops และ Gitops
 - [ ]  Canary deployment คืออะไร กลยุทธ์ ในการทำ deployment โดยจะเป็น รูปแบบ ค่อยๆ update version ตามน้ำหนักที่กำหนดไว้
 - [ ] ใช้เครื่องมืออะไรบ้าง
-- [ ]  Flagger คืออะไร operations for kubernetes
+- [ ]  Flagger คืออะไร operations for kubernetes คอยส่งเหตุการณ์ต่างๆที่เกิดขึ้นบน kubernetes โดยผ่าน webhook ของ slack เป็นข้อความ 
 - [ ] Flagger ช่วยฝั่งไหน
 - [ ] ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
      
