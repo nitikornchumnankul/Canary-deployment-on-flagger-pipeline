@@ -75,15 +75,17 @@
     1. ทำรายงาน ปรับแต่งให้สวยงาม ตรวจสอบรายงาน
     2. ส่งรายงานอาจารย์
 ### เนื้อหาในโครงงาน
-- [ ]  gitops คืออะไร
+- [ ]  gitops คืออะไร operation by pull request เป็นการจัดการ operation ด้วย git  ความต้องการ resource หรือ อะไรต่างๆ ที่ต้องจัดการด้วย kubeclt หรือ helm upgrade เปลี่ยนมาเป็นการจัดการ ผ่าน source code
 - [ ]  Canary deployment คืออะไร
 - [ ]  devops กับ gitops แตกต่างกันอย่างไร
+        GitOps is a set of practices
+        Devops is a culture
 - [ ]  ระหว่างการ Deploy แบบ ธรรมดา กับแบบ 
 - [ ]  gitops ช่วยในการแก้ปัญหาจาก ปกติ คืออะไร
 - [ ]  เปรียบเทียบการ Deploy แบบธรรมดา แบบ Devops และ Gitops
-- [ ]  Canary deployment คืออะไร
+- [ ]  Canary deployment คืออะไร กลยุทธ์ ในการทำ deployment โดยจะเป็น รูปแบบ ค่อยๆ update version ตามน้ำหนักที่กำหนดไว้
 - [ ] ใช้เครื่องมืออะไรบ้าง
-- [ ]  Flagger คืออะไร
+- [ ]  Flagger คืออะไร operations for kubernetes
 - [ ] Flagger ช่วยฝั่งไหน
 - [ ] ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
      
