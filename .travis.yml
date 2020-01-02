@@ -21,6 +21,10 @@ before_script:
   - chmod 777 ./node_modules/.bin/jest
 script:
   - npm test
+  - echo ${TRAVIS_COMMIT}
+  - echo ${TRAVIS_COMMIT}
+  - echo ${DOCKER_USER}
+  - echo ${DOCKER_PASS}
   # - make test
 
 after_success:
