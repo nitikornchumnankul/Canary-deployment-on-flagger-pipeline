@@ -15,7 +15,7 @@ install:
   - npm install
 
 env:
-   - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=E-COMMERCE-AND-CANARY-DEPLOYMNET;
+   - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=e-commerce-and-canary-deployment;
 before_script: 
   - cd  ./e-commerce/backend
   - chmod 777 ./node_modules/.bin/jest
