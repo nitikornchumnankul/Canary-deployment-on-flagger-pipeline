@@ -15,22 +15,22 @@ install:
   - npm install
 
 env:
-   - GROUP=nitikornchumnakul  COMMIT="$TRAVIS_COMMIT"  TAG= "$TRAVIS_TAG"    REPO=E-COMMERCE-AND-CANARY-DEPLOYMNET;
+   - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS  REPO=E-COMMERCE-AND-CANARY-DEPLOYMNET;
 before_script: 
   - cd  ./e-commerce/backend
   - chmod 777 ./node_modules/.bin/jest
 script:
   - npm test
-  - echo ${TRAVIS_COMMIT}
-  - echo ${TRAVIS_COMMIT}
-  - echo ${DOCKER_USER}
-  - echo ${DOCKER_PASS}
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_COMMIT
+  - echo $DOCKER_USER
+  - echo $DOCKER_PASS
   # - make test
 
 after_success:
-   - set -env
-   - if [ -z "${DOCKER_PASS}" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
-   - docker login -u "${DOCKER_USER}" -p "${DOCKER_PASS}";
+   - set -e
+   - if [ -z "$DOCKER_PASS" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
+   - docker login -u $DOCKER_USER -p $DOCKER_PASS;
    - ./scripts/build.sh
    - ./scripts/push.sh
 notifications:
