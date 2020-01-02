@@ -23,10 +23,6 @@ before_script:
   - chmod 777 ./scripts/push.sh
 script:
   - npm test
-  - echo $TRAVIS_COMMIT
-  - echo $TRAVIS_TAG
-  - echo $DOCKER_USERNAME
-  - echo $DOCKER_PASSWORD
   # - make test
 
 after_success:
