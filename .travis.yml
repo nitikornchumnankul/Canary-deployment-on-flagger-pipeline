@@ -8,14 +8,14 @@ services:
 
 before_install:
    - sudo apt-get install -y make
-   - echo "$TRAVIS_TAG" "$TRAVIS_COMMIT"
+  
   #  - make test-image deps
 install:
   - npm install -D jest
   - npm install
 
 env:
-   - GROUP=nitikornchumnakul  COMMIT="${TRAVIS_COMMIT}"  TAG= "${TRAVIS_TAG}"    REPO=E-COMMERCE-AND-CANARY-DEPLOYMNET;
+   - GROUP=nitikornchumnakul  COMMIT="$TRAVIS_COMMIT"  TAG= "$TRAVIS_TAG"    REPO=E-COMMERCE-AND-CANARY-DEPLOYMNET;
 before_script: 
   - cd  ./e-commerce/backend
   - chmod 777 ./node_modules/.bin/jest
