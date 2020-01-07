@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-set -env
+set -ev
 if [[ -z "$GROUP"]] ; then 
     echo "Cannot find GROUP env var"
     exit  1

@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 
-set -env
+set -ev
 
-SCRIPT_DIR="$()"
+SCRIPT_DIR=$(dirname "$0")
 
 if [[ -z "$GROUP"]] ; then
     echo "Cannot find GROUP env var"
