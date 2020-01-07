@@ -28,7 +28,6 @@ script:
 
 after_success:
    - set -e
-   - GROUP=nitikornchumnakul
    - if [ -z "$DOCKER_PASSWORD" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
    - ./scripts/build.sh
