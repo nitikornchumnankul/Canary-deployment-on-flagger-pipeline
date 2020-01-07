@@ -16,7 +16,7 @@ push(){
         echo "Pushing $1";
         docker push $1;
         DOCKER_PUSH=$(echo $?);
-        if [[ "$DOCKER_PUSH" -gt 0 ]] ; then
+        if [[ $DOCKER_PUSH -gt 0 ]] ; then
             echo "Docker push failed with exit code $DOCKER_PUSH";
         fi;
     done ;
@@ -35,14 +35,14 @@ tag_and_push_all(){
     push "$DOCKER_REPO:$TAG";
 }
 #Push snapshot when in master
-if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
     tag_and_push_all ${TRAVIS_TAG}
     tag_and_push_all latest
 fi;
 
 #Push tag and latest when tagged
-if [ -n "$TRAVIS_TAG" ]; then
-if [ -n "$TRAVIS_TAG" ] ; then
-    tag_and_push_all $(TRAVIS_TAG)
+if [ -n $TRAVIS_TAG ]; then
+if [ -n $TRAVIS_TAG ] ; then
+    tag_and_push_all $TRAVIS_TAG
     tag_and_push_all latest
 fi;
