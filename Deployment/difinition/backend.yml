@@ -18,4 +18,4 @@ spec:
         - name: backend
           image: nitikornchumnankul/souvenir-backend
           ports:
-           - containerPort: 8080
+          - containerPort: 8080

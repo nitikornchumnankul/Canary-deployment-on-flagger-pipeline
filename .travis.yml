@@ -15,9 +15,9 @@ install:
   - npm install
 
 env:
-   - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=e-commerce-and-canary-deployment;
+   - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=Canary-deployment-on-flagger-pipeline;
 before_script: 
-  - cd  ./e-commerce/backend
+  - cd  ./Application/backend
   - chmod 777 ./node_modules/.bin/jest
   - chmod 777 ./scripts/build.sh
   - chmod 777 ./scripts/push.sh
