@@ -2,7 +2,7 @@
 
 set -env
 
-SCRIPT_DIR="./e-commerce/frontend"
+SCRIPT_DIR="./Application/frontend"
 
 if [[ -z "$GROUP"]] ; then
     echo "Cannot find GROUP env var"
