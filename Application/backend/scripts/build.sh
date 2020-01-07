@@ -14,7 +14,7 @@ if [[ -z "$COMMIT" ]] ; then
   exit 1
 fi
 
-if [[ "$(uname)" == "Darwin" ]]; then
+if [[ "$(uname)" == "nitikornchumnankul" ]]; then
   DOCKER_CMD=docker
 else
   DOCKER_CMD="sudo docker"
