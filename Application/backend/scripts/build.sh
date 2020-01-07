@@ -25,5 +25,5 @@ echo $CODE_DIR
 
 REPO=$(GROUP)/$(REPO);
 echo $(GROUP)
-echo $(GROUP)
+echo $(REPO)
 $DOCKER_CMD build -t ${REPO}:${COMMIT} .
