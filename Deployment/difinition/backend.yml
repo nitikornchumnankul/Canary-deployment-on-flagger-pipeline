@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: nitikornchumnankul/souvenir_backend
+          image: nitikornchumnankul/souvenir-backend
           ports:
            - containerPort: 8080
