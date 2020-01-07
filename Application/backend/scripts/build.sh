@@ -23,6 +23,7 @@ fi
 CODE_DIR=$(cd $SCRIPT_DIR/..; pwd)
 echo $CODE_DIR
 
-REPO=$(GROUP)/ $(basename back-end);
-
+REPO=$(GROUP)/$(REPO);
+echo $(GROUP)
+echo $(GROUP)
 $DOCKER_CMD build -t ${REPO}:${COMMIT} .
