@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
 set -ev
-if [[ -z "$GROUP" ]] ; then 
+if [[ -z $GROUP ]] ; then 
     echo "Cannot find GROUP env var"
     exit  1
 fi
 
-if [[ -z "$COMMIT" ]] ; then
+if [[ -z $COMMIT ]] ; then
     echo "Cannot find COMMIT env var"
     exit 1
 fi
