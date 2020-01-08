@@ -13,9 +13,11 @@ before_install:
 install:
   - npm install -D jest
   - npm install
+
 branches:
   only:
     - master
+    
 env:
    - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=canary-deployment-on-flagger-pipeline; YARN_GPG=no
 before_script: 
