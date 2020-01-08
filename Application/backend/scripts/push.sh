@@ -4,13 +4,15 @@ if [[ -z "$GROUP" ]] ; then
     echo "Cannot find GROUP env var"
     exit  1
 fi
-if [[ -z "$COMMIT" ]] ; then
+if [[ -z $COMMIT ]] ; then
     echo "Cannot find COMMIT env var"
     exit 1
 fi
+echo $COMMIT
+
 push(){
     DOCKER_PUSH=1;
-    while [ "$DOCKER_PUSH" -gt 0 ] ; do 
+    while [ $DOCKER_PUSH -gt 0 ] ; do 
         echo "Pushing $1";
         docker push $1;
         DOCKER_PUSH=$(echo $?);
@@ -20,17 +22,17 @@ push(){
     done ;
 }
 tag_and_push_all(){
-    if [[ -z "$1" ]] ; then
+    if [[ -z $1 ]] ; then
         echo "Please pass the tag"
         exit  1
     else
         TAG=$1
     fi
     DOCKER_REPO=${GROUP}/${REPO}
-    if [[ "$COMMIT" != "$TAG" ]] ; then 
+    if [[ $COMMIT != $TAG ]] ; then 
             docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG} 
     fi
-    push "$DOCKER_REPO:$TAG";
+    push $DOCKER_REPO:$TAG ;
 }
 #Push snapshot when in master
 if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
