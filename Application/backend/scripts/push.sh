@@ -1,18 +1,24 @@
 #! /usr/bin/env bash
 set -ev
-if [[ -z $GROUP ]] ; then 
+
+# -z หมายถึง ถ้า $GROUP เท่ากับ NULL จะเป็น TRUE
+# exit ณ ที่นี้จะใช้ 2 แบบ คือ 0 กับ 1
+# exit 0 EXIT_SUCCESS
+# exit 1 EXIT_FAILURE 
+
+if [[ -z "$GROUP" ]] ; then 
     echo "Cannot find GROUP env var"
     exit  1
 fi
 
-if [[ -z $COMMIT ]] ; then
+if [[ -z "$COMMIT" ]] ; then
     echo "Cannot find COMMIT env var"
     exit 1
 fi
 
 push(){
     DOCKER_PUSH=1;
-    while [ $DOCKER_PUSH -gt 0 ] ; do 
+    while [ "$DOCKER_PUSH" -gt 0 ] ; do 
         echo "Pushing $1";
         docker push $1;
         DOCKER_PUSH=$(echo $?);
