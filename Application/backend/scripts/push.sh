@@ -4,12 +4,10 @@ if [[ -z "$GROUP" ]] ; then
     echo "Cannot find GROUP env var"
     exit  1
 fi
-
 if [[ -z "$COMMIT" ]] ; then
     echo "Cannot find COMMIT env var"
     exit 1
 fi
-
 push(){
     DOCKER_PUSH=1;
     while [ "$DOCKER_PUSH" -gt 0 ] ; do 
@@ -39,7 +37,6 @@ if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
     tag_and_push_all ${TRAVIS_TAG}
     tag_and_push_all latest
 fi;
-
 #Push tag and latest when tagged
 if [ -n $TRAVIS_TAG ]; then
 if [ -n $TRAVIS_TAG ] ; then
