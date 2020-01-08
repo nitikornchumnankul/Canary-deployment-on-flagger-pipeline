@@ -1,11 +1,5 @@
 #! /usr/bin/env bash
 set -ev
-
-# -z หมายถึง ถ้า $GROUP เท่ากับ NULL จะเป็น TRUE
-# exit ณ ที่นี้จะใช้ 2 แบบ คือ 0 กับ 1
-# exit 0 EXIT_SUCCESS
-# exit 1 EXIT_FAILURE 
-
 if [[ -z "$GROUP" ]] ; then 
     echo "Cannot find GROUP env var"
     exit  1
