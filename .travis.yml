@@ -24,7 +24,10 @@ before_script:
   
 script:
   - npm test
-
+branches:
+  only:
+    - master
+    - /^tag-.*$/
 after_success:
    - set -e
    - if [ -z "$DOCKER_PASSWORD" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
