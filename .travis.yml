@@ -17,6 +17,7 @@ install:
 
 env:
    - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=canary-deployment-on-flagger-pipeline;
+   - YARN_GPG=no
 before_script: 
   - cd  ./Application/backend
   - chmod 777 ./node_modules/.bin/jest
