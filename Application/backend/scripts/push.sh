@@ -36,6 +36,8 @@ tag_and_push_all(){
 }
 #Push snapshot when in master
 if [ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]; then
+    echo ${TRAVIS_TAG}
+    echo $1
     tag_and_push_all ${TRAVIS_TAG}
     tag_and_push_all latest
 fi;
