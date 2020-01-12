@@ -38,6 +38,7 @@ tag_and_push_all(){
     fi
     
     echo "$DOCKER_PASSWORD" | docker login --username ${DOCKER_USERNAME} --password-stdin docker.io
+    docker tag $TAG $DOCKER_REPO
     push $DOCKER_REPO:$TAG ;
 }
 #Push snapshot when in master
