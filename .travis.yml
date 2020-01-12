@@ -21,7 +21,7 @@ branches:
 env:
    - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=canary-deployment-on-flagger-pipeline; YARN_GPG=no
 before_script: 
-  - chmod 777 .docker/config.json
+ 
   - cd  ./Application/backend
   - chmod 777 ./node_modules/.bin/jest
   - chmod 777 ./scripts/build.sh
