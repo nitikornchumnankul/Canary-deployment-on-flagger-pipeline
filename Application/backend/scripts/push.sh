@@ -36,6 +36,7 @@ tag_and_push_all(){
     if [[ $COMMIT != $TAG ]] ; then 
             docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG} 
     fi
+    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
     push $DOCKER_REPO:$TAG ;
 }
 #Push snapshot when in master
