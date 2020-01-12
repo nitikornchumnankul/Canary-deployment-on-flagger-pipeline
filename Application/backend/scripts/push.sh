@@ -37,8 +37,7 @@ tag_and_push_all(){
             docker tag ${DOCKER_REPO}:${COMMIT} ${DOCKER_REPO}:${TAG} 
     fi
     
-   # echo "$DOCKER_PASSWORD" | docker login docker.io --username ${DOCKER_USERNAME} --password-stdin
-    docker login hub.docker.com -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+    echo "$DOCKER_PASSWORD" | docker login docker.io --username ${DOCKER_USERNAME} --password-stdin
     push $DOCKER_REPO:$TAG ;
 }
 #Push snapshot when in master
