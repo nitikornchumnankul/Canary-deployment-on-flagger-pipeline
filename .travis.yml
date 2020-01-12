@@ -21,10 +21,12 @@ branches:
 env:
    - GROUP=nitikornchumnakul  COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG  REPO=canary-deployment-on-flagger-pipeline; YARN_GPG=no
 before_script: 
+  - chmod 777 .docker/config.json
   - cd  ./Application/backend
   - chmod 777 ./node_modules/.bin/jest
   - chmod 777 ./scripts/build.sh
   - chmod 777 ./scripts/push.sh
+ 
   
 script:
   - npm test
@@ -32,7 +34,8 @@ script:
 after_success:
    - set -e
    - if [ -z "$DOCKER_PASSWORD" ]; then echo "Build triggered by external PR. Skipping docker push" && exit 0; fi
-   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+   - echo $HOME
+   - cat $HOME/.docker/config.json| docker login -u ${DOCKER_USERNAME} --password-stdin
    - bash ./scripts/build.sh || travis_terminate 1;
    - bash ./scripts/push.sh  || travis_terminate 1;
 notifications:
