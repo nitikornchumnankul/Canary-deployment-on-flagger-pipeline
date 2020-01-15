@@ -92,6 +92,7 @@
     
     
 ### เว็บอ้างอิง
+#####    [Flagger](https://flagger.app/)
 #####    [Travis CI + GitHub Pages - Automated deployment](https://www.youtube.com/watch?v=BFpSD2eoXUk)
 #####    [Travis CI - Part 5 Pushin To Dockerhub](https://www.youtube.com/watch?v=YrJyWXYTgzQ)
 #####    [NGINX Canary Deployments](https://docs.flagger.app/usage/nginx-progressive-delivery)
