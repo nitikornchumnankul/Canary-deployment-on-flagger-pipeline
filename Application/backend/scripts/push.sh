@@ -9,11 +9,6 @@ if [[ -z $COMMIT ]] ; then
     exit 1
 fi
 
-echo $COMMIT
-echo ${TRAVIS_TAG}
-echo $1
-echo $TAG
-
 push(){
     DOCKER_PUSH=1;
     while [ $DOCKER_PUSH -gt 0 ] ; do 
