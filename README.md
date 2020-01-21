@@ -2,6 +2,7 @@
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT%2FE-COMMERCE-AND-CANARY-DEPLOYMENT?key=eyJhbGciOiJIUzI1NiJ9.NWQ1ZmRmYzFjNDI1ZjE2ZTY1MzQ2YTY4.gyGUScNe8n81E-DdnhuNQ9S0MGEARcGDuCvzksqy200&type=cf-1)]( https://g.codefresh.io/pipelines/E-COMMERCE-AND-CANARY-DEPLOYMENT/builds?filter=trigger:build~Build;pipeline:5d5fe162645130b671b2a137~E-COMMERCE-AND-CANARY-DEPLOYMENT)
 # [Canary-deployment-on-flagger-pipeline](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki)
 
+### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
 ### สัปดาห์ที่ 1 
 1. ทำหน้า UI ของ E-commerce application version 1 ด้วย MEAN STACK
@@ -92,6 +93,7 @@
     
     
 ### เว็บอ้างอิง
+#####    [Flagger](https://flagger.app/)
 #####    [Travis CI + GitHub Pages - Automated deployment](https://www.youtube.com/watch?v=BFpSD2eoXUk)
 #####    [Travis CI - Part 5 Pushin To Dockerhub](https://www.youtube.com/watch?v=YrJyWXYTgzQ)
 #####    [NGINX Canary Deployments](https://docs.flagger.app/usage/nginx-progressive-delivery)
@@ -100,39 +102,4 @@
 #####    [Weaveworks Documentation](https://www.weave.works/docs/)
 #####    [GitOps](https://www.weave.works/technologies/gitops/)
 #####    [Continuous Delivery the Hard Way with Kuberenetes](https://www.youtube.com/watch?v=6PPgZXuDY_U)
- บทนำ
- เกริ่นไปเลน ทำ continueous อย่างไร กระบวนทำเมื่อก่อนเป็นอย่างไร
- เราปัญหา
- วัตถุประสงค์อยากหาอะไรให้เจอ
- ส่วนท้ายบทแรก
- ในบทที่ 2 จะมีอะไรบ้าง บทที่ 3 จะ พูดอะไร
  
- บทที่ 2 เรื่องราวที่เกี่ยวข้อง
- ว่ามี cloud มี flagger มี เรื่องรอบๆ
- บทที่ 3 เราทำอะไร
- เล่ากระบวนการในการสร้าง pipepline
- บทที่ 4 วัดผมลัพธ์ เราวัดอย่างไร
- ได้เรียนรู้อะไรได้บ้าง จากสิ่งที่เราทำ
- ให้
-สรุป
-ได้ข้อสรุป อะไรบ้าง ได้ตามที่ เป้า ตามไว้หรือ
-ถ้าได้ มันได้อย่างไร 
-
-ถ้าไม่ได้ปัญหา นั้นอย่างไร
- 
-ให้ไอเดีย ในการทำ ต่อ ว่าจะทำ
-
-
-เอกสารอ้างอิงหลักการ นิดนึง
-
-ปลายทางของโปรเจคนี้ ทำขึ้นเพื่อ เข้าใจกระบวนการพัฒนาตั้งแต่ พัฒนาเว็บแอปพลิเคชั่นไปจนถึงการนำเว็บนั้นขึ้น production
-ประเด็นหลักๆ คือ เมื่อต้องการ อัพเดตเวอร์ชั่นใหม่ ขึ้นโปรดัคชั่น โดยที่ระบบเก่า ไม่ได้หยุดทำงาน
-จึงเสนอ flagger ไป
-
-flagger คือ ตัวจัดการ k8s ในกรณีที่ มี image ใหม่เข้ามา เจ้าตัว flagger จะค้นหา image ใหม่ แล้วนำไป deploy โดยการ deploy จะเป็นรูป แบบ canary deployment
-การ deploy มี 3 ลักษณะมั้ง เท่าที่เห็น จะมีแบบ rolling update กับ canary deployment กับ เอา resource ไปวาง
-
-gitops คือ กระบวนการ  Continuous Delivery โดยใช้ การเปลี่ยนแปลงโค้ดที่อยู่บน github 
-
-แล้วมันต่างจากการทำปกติอย่างไร ดีกว่า codefresh อย่างไรทั้งๆ ที่ต้อง กด deploy เหมือนกัน
-
