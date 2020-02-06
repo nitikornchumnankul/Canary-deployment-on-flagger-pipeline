@@ -1,9 +1,13 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-nginx
   labels:
     app: nginx
+  annotations:
+    flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
+    flux.weave.works/locked: 'true'
 spec:
   replicas: 1
   selector:

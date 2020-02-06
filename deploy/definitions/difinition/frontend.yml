@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -7,11 +8,11 @@ metadata:
 spec:
   type: NodePort
   ports:
-   - port: 8080
-     name: http
-     targetPort: 80
+  - port: 8080
+    name: http
+    targetPort: 80
   selector:
-    app: frontend 
+    app: frontend
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -19,6 +20,9 @@ metadata:
   name: frontend
   labels:
     app: fortend
+  annotations:
+    flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
+    flux.weave.works/locked: 'true'
 spec:
   replicas: 1
   selector:
@@ -30,7 +34,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: frontend
-          image: nitikornchumnankul/souvenir_frontend
-          ports:
-            - containerPort: 80
+      - name: frontend
+        image: nitikornchumnankul/souvenir_frontend
+        ports:
+        - containerPort: 80
