@@ -1,5 +1,5 @@
-GCP_PROJECT="black-anagram-259815"
-PROJECT_ID="black-anagram-259815"
+GCP_PROJECT="stoked-reality-267107"
+PROJECT_ID="stoked-reality-267107"
 DOMAIN="kongtelalug.com"
 compute_region="us-central1" 
 compute_zone="us-central1-a"
