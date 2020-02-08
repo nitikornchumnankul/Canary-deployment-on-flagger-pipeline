@@ -1,0 +1,16 @@
+---
+apiVersion: extensions/v1beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name:  users
+  namespace: sut-kongtelalug
+spec:
+  scalRef:
+    kind: Deployment
+    name: users
+    subresource: scale
+  minReplicas: 1
+  maxReplicas: 10
+  cpuUtilization:
+    targetPercentage: 50
+    

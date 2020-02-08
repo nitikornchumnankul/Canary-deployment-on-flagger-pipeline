@@ -16,4 +16,4 @@ spec:
           serviceAccountSecretRef:
             name: cert-manager-credentials
             key: gcp-dns-admin.json
-          project: black-anagram-259815
+          project: stoked-reality-267107
