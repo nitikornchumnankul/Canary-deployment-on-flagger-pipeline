@@ -1,0 +1,65 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: customers
+spec:
+  replicas: 1
+  template:
+    metadata:
+    labels:
+      name: customers
+    annotations:
+      flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
+      flux.weave.works/locked: 'true'
+    spec:
+      containers:
+        - name: customers
+          image: nitikornchumnankul/customers
+          prots:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers
+  labels:
+    name:  customers
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    name:  customers
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: customers-db
+  labels:
+    name: customers-db
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: customers-db
+    spec:
+      containers:
+      - name: customers-db
+        image: mongo:3.2.11
+        ports:
+        - name: mongo
+          containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers-db
+  labels:
+    name: customers-db
+spec:
+  ports:
+  - port: 27017
+    targetPort: 27017
+  selector:
+    name: customers-db

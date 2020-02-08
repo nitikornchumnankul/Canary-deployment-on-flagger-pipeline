@@ -1,0 +1,65 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vendors
+spec:
+  replicas: 1
+  template:
+    metadata:
+    labels:
+      name: vendors
+    annotations:
+      flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
+      flux.weave.works/locked: 'true'
+    spec:
+      containers:
+        - name: vendors
+          image: nitikornchumnankul/vendors
+          prots:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vendors
+  labels:
+    name:  vendors
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    name:  vendors
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vendors-db
+  labels:
+    name: vendors-db
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: vendors-db
+    spec:
+      containers:
+      - name: vendors-db
+        image: mongo:3.2.11
+        ports:
+        - name: mongo
+          containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vendors-db
+  labels:
+    name: vendors-db
+spec:
+  ports:
+  - port: 27017
+    targetPort: 27017
+  selector:
+    name: vendors-db
