@@ -1,0 +1,1 @@
+{"jobID":"6a9d9c33-c4b2-9bd1-a5b1-89b3f2588019","spec":{"type":"policy","cause":{"Message":"","User":"Nitikorn Chumnankul \u003cpitchayapim1997@gmail.com\u003e"},"spec":{"default:deployment/customers-db":{"add":{"automated":"true"},"remove":null}}},"result":null}
