@@ -1,3 +1,4 @@
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -13,23 +14,23 @@ spec:
       flux.weave.works/automated: 'true'
     spec:
       containers:
-        - name: vendors
-          image: nitikornchumnankul/vendors:latest
-          prots:
-            - containerPort: 8080
+      - name: vendors
+        image: nitikornchumnankul/vendors:latest
+        prots:
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: vendors
   labels:
-    name:  vendors
+    name: vendors
 spec:
   ports:
-    - port: 8080
-      targetPort: 8080
+  - port: 8080
+    targetPort: 8080
   selector:
-    name:  vendors
+    name: vendors
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -37,6 +38,8 @@ metadata:
   name: vendors-db
   labels:
     name: vendors-db
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 1
   template:
