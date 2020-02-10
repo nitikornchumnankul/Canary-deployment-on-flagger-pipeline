@@ -10,7 +10,7 @@ spec:
       name: vendors
     annotations:
       flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
-      flux.weave.works/locked: 'true'
+      flux.weave.works/automated: 'true'
     spec:
       containers:
         - name: vendors
