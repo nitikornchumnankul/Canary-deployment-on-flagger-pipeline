@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: products
-          image: nitikornchumnankul/products
+          image: nitikornchumnankul/products:latest
           prots:
             - containerPort: 8080
 ---
