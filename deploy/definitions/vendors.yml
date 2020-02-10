@@ -16,7 +16,7 @@ spec:
       containers:
       - name: vendors
         image: nitikornchumnankul/vendors:latest
-        prots:
+        ports:
         - containerPort: 8080
 ---
 apiVersion: v1
