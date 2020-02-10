@@ -16,7 +16,7 @@ spec:
       containers:
       - name: customers
         image: nitikornchumnankul/customers:latest
-        prots:
+        ports:
         - containerPort: 8080
 ---
 apiVersion: v1
