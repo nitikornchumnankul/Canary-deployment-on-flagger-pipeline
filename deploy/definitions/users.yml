@@ -16,7 +16,7 @@ spec:
       containers:
       - name: users
         image: nitikornchumnankul/users:latest
-        prots:
+        ports:
         - containerPort: 8080
 ---
 apiVersion: v1
