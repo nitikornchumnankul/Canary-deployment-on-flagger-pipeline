@@ -1,7 +1,22 @@
 [![Build Status](https://travis-ci.org/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT.svg?branch=master)](https://travis-ci.org/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT)
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT%2FE-COMMERCE-AND-CANARY-DEPLOYMENT?key=eyJhbGciOiJIUzI1NiJ9.NWQ1ZmRmYzFjNDI1ZjE2ZTY1MzQ2YTY4.gyGUScNe8n81E-DdnhuNQ9S0MGEARcGDuCvzksqy200&type=cf-1)]( https://g.codefresh.io/pipelines/E-COMMERCE-AND-CANARY-DEPLOYMENT/builds?filter=trigger:build~Build;pipeline:5d5fe162645130b671b2a137~E-COMMERCE-AND-CANARY-DEPLOYMENT)
 # [Canary-deployment-on-flagger-pipeline](https://github.com/nitikornchumnankul/E-COMMERCE-AND-CANARY-DEPLOYMENT/wiki)
-
+### เนื้อหาที่เกี่ยวข้อง
+- [ ] Tdd development
+- [ ] 12 factor application principles
+- [ ] Microservice Model
+- [ ] Service Mesh Model
+- [ ] Domain name
+- [ ] CI CD
+- [ ] GITOPS
+- [ ] Deployment strategy(Canary,A/B Testing,Blue/Green)
+- [ ] Docker
+- [ ] Kubernetes
+- [ ] Helm
+- [ ] Istio
+- [ ] Flux
+- [ ] Flagger
+  
 ### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
 ### สัปดาห์ที่ 1 
