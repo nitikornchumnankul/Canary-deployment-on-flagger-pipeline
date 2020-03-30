@@ -16,7 +16,7 @@
 - [ ] Istio
 - [ ] Flux
 - [ ] Flagger
-  
+[เนื้อหาส่วนให้อ้างอิงจาก](https://www.slideshare.net/weaveworks/kubecon-seattle-2018-workshop-slides)
 ### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
 ### สัปดาห์ที่ 1 
