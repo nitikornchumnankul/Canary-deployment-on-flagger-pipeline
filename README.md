@@ -8,7 +8,7 @@
 - [ ] Service Mesh Model
 - [ ] Domain name
 - [ ] CI CD
-- [ ] GITOPS
+- [ ] [GITOPS](https://docs.google.com/presentation/d/1ujRd4k2s8dG0-AMHIWMTyA8JoTUkXRQwXQ4izmDWeTI/edit#slide=id.g1e8a60acf8_0_8)
 - [ ] Deployment strategy(Canary,A/B Testing,Blue/Green)
 - [ ] Docker
 - [ ] Kubernetes
