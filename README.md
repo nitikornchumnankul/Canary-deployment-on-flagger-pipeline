@@ -118,4 +118,5 @@
 #####    [Weaveworks Documentation](https://www.weave.works/docs/)
 #####    [GitOps](https://www.weave.works/technologies/gitops/)
 #####    [Continuous Delivery the Hard Way with Kuberenetes](https://www.youtube.com/watch?v=6PPgZXuDY_U)
+#####    [POWERPOINT TEMPLATE](https://pptmon.com/category/templates/design-idea/)
  
