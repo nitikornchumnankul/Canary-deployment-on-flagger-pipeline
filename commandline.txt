@@ -1,0 +1,67 @@
+helm upgrade -i flagger flagger/flagger \
+--namespace=istio-system \
+--set metricsServer=http://prometheus.istio-system:9090 \
+--set slack.url="https://hooks.slack.com/services/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" \
+--set slack.channel=general \
+--set slack.user=flagger
+
+helm upgrade -i flagger-grafana flagger/grafana \
+--namespace=istio-system \
+--set url=http://prometheus.istio-system:9090 \
+--set user=admin \
+--set password=admin
+
+
+kubectl create clusterrolebinding "cluster-admin-$(whoami)" \
+--clusterrole=cluster-admin \
+--user="$(gcloud config get-value core/account)"
+
+helm install --name flagger-grafana flagger/grafana --namespace istio-system
+
+helm upgrade --name flagger flagger/flagger --namespace=istio-system --set crd.create=false --set metricsServer=http://prometheus.istio-system:9090 --set slack.url=https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK \
+--set slack.channel=general \
+--set slack.user=flagger
+nginx
+
+
+
+
+when we have promblem about 
+Error: release flagger-grafana failed: namespaces "default" is forbidden: User "system:serviceaccount:kube-system:default" cannot get resource "namespaces" in API group "" in the namespace "default"
+
+helm init --upgrade --service-account tiller 
+
+The command above that's work for me
+
+
+
+helm upgrade -i flagger flagger/flagger --namespace=istio-system --set crd.create=false --set metricsServer=http://prometheus.istio-system:9090 --set slack.url=https://hooks.slack.com/services/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 --set slack.channel=flagger --set slack.user=flagger
+
+helm upgrade flagger flagger/flagger --namespace istio-system --set crd.create=false --set metricsServer=http://prometheus.istio-system:9090 --set slack.url=https://hooks.slack.com/services/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 --set slack.channel=flagger --set slack.user=flagger
+
+
+
+
+
+helm upgrade flagger-grafana flagger/grafana --namespace=istio-system --set url=http://prometheus.istio-system:9090 --set user=admin --set password=admin
+
+
+
+
+
+
+1ac5f8209826        
+
+https://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.5/zipkin-starter-0.1.5-kubernetes.yml
+
+
+https://github.com/fabric8io/kubernetes-zipkin
+
+
+  bash <(curl -L https://git.io/getLatestKialiOperator) --accessible-namespaces 'istio-system'
+
+
+
+helm install install/kubernetes/helm/istio --name istio --tls --namespace istio-system --set global.mtls.enabled=true --set grafana.enabled=true --set servicegraph.enabled=true --set tracing.enabled=true --set kiali.enabled=true 
+
+helm upgrade --name istio --namespace istio-system --set global.mtls.enabled=true --set grafana.enabled=true --set servicegraph.enabled=true --set tracing.enabled=true --set kiali.enabled=true 
