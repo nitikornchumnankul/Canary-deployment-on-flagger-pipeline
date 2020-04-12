@@ -15,8 +15,9 @@
 - [ ] Helm
 - [ ] Istio
 - [ ] Flux
-- [ ] Flagger
-  
+- [ ] [Flagger](https://docs.google.com/presentation/d/1NBMhY9TUzh4I830KIzy1n0dfU_rul2sPdSOHRhyLyK4/edit#slide=id.g8292fad430_0_12)
+
+[เนื้อหาส่วนให้อ้างอิงจาก](https://www.slideshare.net/weaveworks/kubecon-seattle-2018-workshop-slides)
 ### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
 ### สัปดาห์ที่ 1 
@@ -99,7 +100,7 @@
 - [ ]  gitops ช่วยในการแก้ปัญหาจาก ปกติ คืออะไร
 - [ ]  เปรียบเทียบการ Deploy แบบธรรมดา แบบ Devops และ Gitops
 - [ ]  Canary deployment คืออะไร กลยุทธ์ ในการทำ deployment โดยจะเป็น รูปแบบ ค่อยๆ update version ตามน้ำหนักที่กำหนดไว้
-- [ ] ใช้เครื่องมืออะไรบ้าง
+- [ ]  ใช้เครื่องมืออะไรบ้าง
 - [ ]  Flagger คืออะไร operations for kubernetes คอยส่งเหตุการณ์ต่างๆที่เกิดขึ้นบน kubernetes โดยผ่าน webhook ของ slack เป็นข้อความ 
 - [ ] Flagger ช่วยฝั่งไหน
 - [ ] ถ้า Config ผิด Error จะเป็นประมาณไหน แล้วแก้อย่างไร
