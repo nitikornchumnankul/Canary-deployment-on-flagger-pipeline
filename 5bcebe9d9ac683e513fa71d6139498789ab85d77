@@ -1,0 +1,1 @@
+{"jobID":"c14aa21f-244d-3b7e-7b4e-f29c06655f5d","spec":{"type":"policy","cause":{"Message":"","User":"Wathiwut Chumnankul \u003cwathiwut1966@gmail.com\u003e"},"spec":{"test:deployment/front-end":{"add":{"automated":"true"},"remove":null}}},"result":null}
