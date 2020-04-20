@@ -9,8 +9,8 @@ spec:
     labels:
       name: front-end
     annotations:
-      flux.weave.works/locked_user: Nitikorn Chumnankul <pitchayapim1997@gmail.com>
       flux.weave.works/automated: 'true'
+      flux.weave.work/tag.front-end: glob:v2.0-*
     spec:
       containers:
         - name: front-end
