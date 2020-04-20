@@ -16,7 +16,7 @@ spec:
         - name: front-end
           image: nitikornchumnankul/front-end:v2.0-8b1c02da
           ports:
-            - containerPort: 4200
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +28,6 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 4200
+      targetPort: 80
   selector:
     name:  front-end
