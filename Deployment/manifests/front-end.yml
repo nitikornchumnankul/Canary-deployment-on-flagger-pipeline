@@ -6,6 +6,8 @@ metadata:
   namespace: test
   labels:
     app: front-end
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 5
