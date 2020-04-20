@@ -1,16 +1,19 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name:  front-end
-  namespace: sut-kongtelalug
+  creationTimestamp: null
+  name: front-end
+  namespace: test
 spec:
-  scalRef:
+  maxReplicas: 2
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
     kind: Deployment
     name: front-end
-    subresource: scale
-  minReplicas: 1
-  maxReplicas: 10
-  cpuUtilization:
-    targetPercentage: 50
+  targetCPUUtilizationPercentage: 50
+status:
+  currentReplicas: 0
+  desiredReplicas: 0
     
