@@ -11,4 +11,4 @@ spec:
   http:
     - route:
       - destination:
-          host: front-end-primary
+          host: front-end
