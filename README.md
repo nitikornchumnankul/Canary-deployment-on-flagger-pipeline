@@ -128,4 +128,6 @@
 #####    [GitOps](https://www.weave.works/technologies/gitops/)
 #####    [Continuous Delivery the Hard Way with Kuberenetes](https://www.youtube.com/watch?v=6PPgZXuDY_U)
 #####    [POWERPOINT TEMPLATE](https://pptmon.com/category/templates/design-idea/)
+
+[istioGKE]("https://gist.github.com/lucasponce/ac4de4ad5a2994ec7e5a291746db4c28.js")
  

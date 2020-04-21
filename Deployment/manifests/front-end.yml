@@ -6,6 +6,9 @@ metadata:
   namespace: test
   labels:
     app: front-end
+  annotations:
+    flux.weave.works/automated: 'true'
+    flux.weave.work/tag.front-end: glob:v2.0-*
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 5
@@ -24,8 +27,6 @@ spec:
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9797"
-        flux.weave.works/automated: 'true'
-        flux.weave.work/tag.front-end: glob:v2.0-*
     spec:
       containers:
       - name: front-end
