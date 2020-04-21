@@ -8,7 +8,7 @@ metadata:
     app: front-end
   annotations:
     flux.weave.works/automated: 'true'
-    flux.weave.work/tag.front-end: glob:v2.0-*
+    # flux.weave.work/tag.front-end: glob:v2.0-*
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 5
