@@ -5,7 +5,7 @@ metadata:
   namespace: test
 spec:
   hosts:
-    - "sut.kongtelalug.com"
+    - "*"
   gateways:
     - public-gateway.istio-system.svc.cluster.local
   http:
