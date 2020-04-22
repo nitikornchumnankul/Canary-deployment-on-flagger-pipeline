@@ -44,7 +44,7 @@ spec:
     # schedule interval (default 60s)
     interval: 1m
     # max number of failed metric checks before rollback
-    threshold: 5
+    threshold: 10
     # max traffic percentage routed to canary
     # percentage (0-100)
     maxWeight: 50
@@ -56,7 +56,7 @@ spec:
       # minimum req success rate (non 5xx responses)
       # percentage (0-100)
       thresholdRange:
-        min: 80
+        min: 70
       interval: 1m
     - name: request-duration
       # maximum req duration P99
