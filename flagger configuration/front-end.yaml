@@ -56,14 +56,14 @@ spec:
       # minimum req success rate (non 5xx responses)
       # percentage (0-100)
       thresholdRange:
-        min: 70
+        min: 60
       interval: 1m
     - name: request-duration
       # maximum req duration P99
       # milliseconds
       thresholdRange:
         max: 500
-      interval: 30s
+      interval: 1m
     # testing (optional)
     webhooks:
       - name: load-test
