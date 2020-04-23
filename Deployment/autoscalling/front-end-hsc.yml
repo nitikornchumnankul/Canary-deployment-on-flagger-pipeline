@@ -6,8 +6,8 @@ metadata:
   name: front-end
   namespace: test
 spec:
-  maxReplicas: 2
-  minReplicas: 1
+  maxReplicas: 4
+  minReplicas: 2
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
