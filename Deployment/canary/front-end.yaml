@@ -32,7 +32,7 @@ spec:
     interval: 1m
     threshold: 10
     maxWeight: 50
-    stepWeight: 10
+    stepWeight: 5
     webhooks:
       - name: load-test
         url: http://flagger-loadtester.test/
