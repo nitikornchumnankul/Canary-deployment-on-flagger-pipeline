@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: nitikornchumnankul/front-end:v1.0-6294eff8
+        image: nitikornchumnankul/front-end:v1.0-3f6a64a
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
