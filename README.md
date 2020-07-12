@@ -5,6 +5,7 @@
 [เนื้อหาส่วนให้อ้างอิงจาก](https://www.slideshare.net/weaveworks/kubecon-seattle-2018-workshop-slides)
 ### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
+[Presentation](https://docs.google.com/presentation/d/1B8YrBI604nMdOZBy1lQ0T6qDTfD66PqnIK3QxdP-khA/edit?usp=sharing)
      
  ติดตั้ง Weave Scope
  
