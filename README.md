@@ -6,6 +6,10 @@
 ### The Canary-deployment-on-flagger-pipeline Project is not finished. 
 
 [Presentation](https://docs.google.com/presentation/d/1B8YrBI604nMdOZBy1lQ0T6qDTfD66PqnIK3QxdP-khA/edit?usp=sharing)
+
+# Flagger
+Weave Flagger คืออะไร
+Weave Flagger คือ Kubernetes Operator ซึ่งสามารถทำ Canary Deployment เป็นในรูปแบบอัตโนมัติ
      
  ติดตั้ง Weave Scope
  
