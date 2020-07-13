@@ -1,2 +1,3 @@
 .vscode
+.docker
 ./Application/backend
