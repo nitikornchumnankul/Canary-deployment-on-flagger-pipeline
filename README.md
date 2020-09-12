@@ -9,7 +9,7 @@
 
 # Flagger
 Weave Flagger คืออะไร
-Weave Flagger คือ Kubernetes Operator ซึ่งสามารถทำ Canary Deployment เป็นในรูปแบบอัตโนมัติ
+Weave Flagger คือ Kubernetes Operator ซึ่งช่วยในการทำ Canary Deployment ให้ง่ายยิ่งขึ้น
      
  ติดตั้ง Weave Scope
  
